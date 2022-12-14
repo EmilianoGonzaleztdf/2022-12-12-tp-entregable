@@ -9,10 +9,6 @@ function cargarTabla(data){
     
     for (let index = 0; index < data.length; index++) {
         let element = data[index];
-        
-       
-
-
         // creo los elementos dentro del tbody
         let tr = document.createElement('tr');
         let tdId = document.createElement('td');
@@ -81,20 +77,10 @@ function eliminar(id){
 function guardar(){
 
      let idF = document.getElementById('idForm');   
-     //tdId.innerText = idF.value;
-
      let nameF = document.getElementById('nameForm');
-     //tdName.innerText = nameF.value;
- 
      let cityF = document.getElementById('cityForm');
-    // tdCity.innerText = cityF.value;
- 
      let birthdayF = document.getElementById('birthdayForm');
-    // tdBday.innerText = birthdayF.value;
- 
      let emailF = document.getElementById('emailForm');
-     //tdMail.innerText = emailF.value;
-
 
      // le inserto los valores al tr y td
      let tr = document.getElementById('row'+ idF.value);
@@ -110,16 +96,6 @@ function guardar(){
      
      let birthday = city.nextElementSibling;
      birthday.nextElementSibling.innerText = emailF.value;
-
-    
-     
-        
-
-     //let newId = parseInt(tr.lastChild.firstChild.innerText)+ 1;
-
-    
-    
-
 
 
 }
@@ -139,10 +115,10 @@ function agregar(){
     // le inserto los valores al tr y td
     let tabla = document.getElementById('tab');
     let newId = parseInt(tabla.lastChild.firstChild.innerText)+ 1;
-    //
+
     tdId.innerText = newId;
 
-    //
+
     let nameF = document.getElementById('nameForm');
     tdName.innerText = nameF.value;
 
@@ -179,8 +155,6 @@ function agregar(){
     <h3>${cant2} </h3>`;
 
 }
-
-
 fetch(api)
     .then(response => response.json())
     .then(data => {
@@ -188,10 +162,3 @@ fetch(api)
     })
   
     .catch(error => console.error(error))
-
-
-
-
-
-
-
